@@ -1,15 +1,43 @@
-.exhibit {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px 0;
+.Exhibit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5vw;
+  padding: 2vw;
+  text-align: center;
+  color: #002933;
+  background-color: #00b8e6;
+  border: 0.1vw solid #005266; /* Smaller border width */
+  border-radius: 2vw;
+  box-sizing: border-box;
+}
+
+.ExhibitHeading {
+  font-weight: bold;
+  font-size: 1.75vw;
+}
+
+.ExhibitContent {
+  margin: 0.5vw;
+  padding: 1vw;
+  font-size: 1vw;
+  color: #002933;
+  background-color: #80e5ff;
+  border: 0.25vw solid #005266; /* You can adjust this as well if needed */
+  border-radius: 2vw;
+  box-sizing: border-box;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .Exhibit {
+    margin: 1vw;
+    padding: 4vw;
+    border-radius: 1vw;
+    border: 0.1vw solid #005266; /* Smaller border width for mobile */
   }
-  
-  .exhibit h2 {
-    margin-top: 0;
+
+  .ExhibitHeading, .ExhibitContent {
+    font-size: 4vw;
   }
-  
-  .exhibit-content {
-    margin-top: 20px;
-  }
-  
+}

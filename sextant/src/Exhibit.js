@@ -1,15 +1,17 @@
 import React from 'react';
-import './Exhibit.css'; // Importing styles specifically for the Exhibit component
+import PropTypes from 'prop-types';
+import './Exhibit.css';
 
-function Exhibit({ children, heading }) {
-  return (
-    <div className="exhibit">
-      <h2>{heading}</h2>
-      <div className="exhibit-content">
-        {children}
-      </div>
-    </div>
-  );
-}
+const Exhibit = ({ name, children }) => (
+  <div className="Exhibit">
+    <h2 className="ExhibitHeading">{name}</h2>
+    <div className="ExhibitContent">{children}</div>
+  </div>
+);
+
+Exhibit.propTypes = {
+  name: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+};
 
 export default Exhibit;
